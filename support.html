@@ -1,0 +1,90 @@
+{% extends 'default.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center">{% block title %}Support{% endblock %}</h1>
+
+<div class="container">
+    <li><a href="#admin">Admin</a></li>
+<li><a href="#students">Students</a></li>
+<li><a href="#schools">Schools</a></li>
+<li><a href="#signature">Signture Requests</a></li>
+<li><a href="#contact">Contact</a></li>
+</div>
+
+<div class="container">
+
+    <div class="w3-card-4" id="Admin">
+
+        <header class="w3-container w3-dark-grey">
+          <h1>Admin</h1>
+        </header>
+        
+        <div class="w3-container">
+          <p>As an Admin, users are able to add, delete, or edit values in the database.</p>
+          <p style="padding-left:5em">Adding to the database</p>
+          <p style="padding-left:5em">&#8226;Select the <b>Add</b> button next to the core section you want to add to.</p>
+          <p style="padding-left:5em"><img src="{% static 'img/admin_home.png' %}"></p>
+          <br>
+        </div>
+    </div>
+    
+    <div class="w3-card-4" id="students">
+    
+        <header class="w3-container w3-dark-grey">
+          <h1>Students</h1>
+        </header>
+        
+        <div class="w3-container">
+          <p>Users are able to modify students by navigating to <b><a href="{% url 'students' %}">Students</a></b>.</p>
+          <p style="padding-left:5em">&#8226;To add a student click the <b>Add Student</b> button at the top of the page.</p>
+          <p style="padding-left:5em">&#8226;A student can be searched by either their last name, first name, or both.</p>
+          <p style="padding-left:5em">&#8226;Documents for a student can be uploaded by clicking the <b>View/Edit</b> button. Forms can be sent to be signed as well.</p>
+          <p style="padding-left:5em">&#8226;If a student needs to be deleted click the red <b>Delete</b> button. Note this action cannot be undone.</p>
+        </div>
+    </div>
+    
+    <div class="w3-card-4" id="schools">
+    
+        <header class="w3-container w3-dark-grey">
+          <h1>Schools</h1>
+        </header>
+        
+        <div class="w3-container">
+            <p>Users are able to modify and view details of a school by navigating to <b><a href="{% url 'schools' %}">Schools</a></b>.</p>
+            <p style="padding-left:5em">&#8226;To add a school click the <b>Add School</b> button at the top of the page.</p>
+            <p style="padding-left:5em">&#8226;A school can be searched by either its short name, full name, or both.</p>
+            <p style="padding-left:5em">&#8226;Forms for a school can be created by clicking the <b>View forms</b> button.</p>
+            <p style="padding-left:5em">&#8226;Meetings for a school can be created and viewed by clicking the <b>View Meetings</b> button.</p>
+            <p style="padding-left:5em">&#8226;If a school needs to be removed click the red <b>Delete</b> button. Note this action cannot be undone.</p>
+        </div>
+    </div>
+    
+    <div class="w3-card-4" id="signature">
+    
+        <header class="w3-container w3-dark-grey">
+          <h1>Signature Requests</h1>
+        </header>
+        
+        <div class="w3-container">
+          <p>Under <b><a href="">Signature Requests</a></b> users can see the status of a signature request for each student.</p>
+        </div>
+    </div>
+    
+    <div class="w3-card-4" id="contact">
+    
+        <header class="w3-container w3-dark-grey">
+          <h1>Contact</h1>
+        </header>
+        
+        <div class="w3-container">
+          <p>Lorem ipsum...</p>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

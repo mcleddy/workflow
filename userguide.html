@@ -1,0 +1,66 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block title %}User Guide{% endblock %}
+{% block content %}
+
+<div class="container mt-5 user-guide">
+    <div class="fade-in">
+        <h1 class="text-center"><b>The Future of Education Software</b></h1>
+        <h4 class="text-center">Let NGE Financial Documents handle your online financial aid needs.</h4>
+    </div>
+
+    <div class="row my-5 fade-in">
+        <div class="col-5">
+            <h3><b>Keep Track of Schools and Students</b></h3>
+            <h4>All profiles, organized in one place.</h4>
+        </div>
+        <div class="col-7">
+            <img src="{% static 'img/userguide1.png' %}"></p>
+        </div>
+    </div>
+    <div class="row my-5 fade-in">
+        <div class="col-7">
+            <img src="{% static 'img/userguide2.png' %}"></p>
+        </div>
+        <div class="col-5">
+            <h3><b>Create Detailed Student Records</b></h3>
+            <h4>View, manage, and contact students with our all-in-one digital platform.</h4>
+        </div>
+    </div>
+    <div class="row my-5 fade-in">
+        <div class="col-5">
+            <h3><b>Build Electronic Forms</b></h3>
+            <h4>Easily convert your pdf documents into signable forms to send to students.</h4>
+        </div>
+        <div class="col-7">
+            <img src="{% static 'img/userguide3.png' %}"></p>
+        </div>
+    </div>
+    <div class="row my-5 fade-in">
+        <div class="col-7">
+            <img src="{% static 'img/userguide4.png' %}"></p>
+        </div>
+        <div class="col-5">
+            <h3><b>Scheduling Made Easy</b></h3>
+            <h4>Book appointments with students with Zoom integration.</h4>
+        </div>
+    </div>
+</div>
+
+<script>
+    var fadeIn = document.querySelectorAll('.fade-in');
+    for (var i = 0; i < fadeIn.length; i++) {
+        var element = fadeIn[i];
+        element.style.opacity = '0';
+    }
+
+    $(window).bind("load", function () {
+        for (var i = 0; i < fadeIn.length; i++) {
+            var element = fadeIn[i];
+            element.classList.add('fade-in');
+            element.style['animation-delay'] = (.08 * (i + 1)) + 's';
+        }
+    });
+</script>
+{% endblock %}
